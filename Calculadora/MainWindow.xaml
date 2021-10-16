@@ -11,6 +11,57 @@
         MinHeight="450"
         MinWidth="338.793"
         Icon="assets1/128.ico">
+
+    <Window.Resources>
+
+        <Style TargetType="{x:Type Button}"
+               x:Key="Boton">
+
+            <Setter Property="Margin"
+                    Value="5" />
+
+            <EventSetter Event="Click"
+                         Handler="ClickarNumero" />
+
+        </Style>
+
+        <Style TargetType="{x:Type Button}"
+               x:Key="Row1"
+               BasedOn="{StaticResource Boton}">
+
+            <Setter Property="Grid.Row"
+                    Value="1" />
+
+        </Style>
+
+        <Style TargetType="{x:Type Button}"
+               BasedOn="{StaticResource Boton}"
+               x:Key="Row2">
+
+            <Setter Property="Grid.Row"
+                    Value="2" />
+
+        </Style>
+
+        <Style TargetType="{x:Type Button}"
+               BasedOn="{StaticResource Boton}"
+               x:Key="Row3">
+
+            <Setter Property="Grid.Row"
+                    Value="3" />
+
+        </Style>
+
+        <Style TargetType="{x:Type Button}"
+               BasedOn="{StaticResource Boton}"
+               x:Key="Row4">
+
+            <Setter Property="Grid.Row"
+                    Value="4" />
+
+        </Style>
+
+    </Window.Resources>
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -32,18 +83,16 @@
                 BorderThickness="1"
                 Margin="4"
                 Grid.ColumnSpan="3">
-            
+
             <Viewbox>
                 <TextBlock x:Name="NumerosTextBlock"
                            FontSize="90"></TextBlock>
             </Viewbox>
         </Border>
 
-        <Button Grid.Column="0"
-                Grid.Row="1"
-                Tag="1"
-                Margin="5"
-                Click="ClickarNumero">
+        <Button Style="{StaticResource Row1}"
+                Grid.Column="0"
+                Tag="1">
 
             <Viewbox>
                 <TextBlock>1</TextBlock>
@@ -52,97 +101,79 @@
         </Button>
 
 
-        <Button Grid.Column="1"
-                Grid.Row="1"
-                Margin="5"
-                Tag="2"
-                Click="ClickarNumero">
+        <Button Style="{StaticResource Row1}"
+                Grid.Column="1"
+                Tag="2">
             <Viewbox>
                 <TextBlock>2</TextBlock>
             </Viewbox>
         </Button>
 
-            <Button Grid.Column="2"
-                    Grid.Row="1"
-                    Margin="5"
-                    Tag="3"
-                Click="ClickarNumero">
-                <Viewbox>
-                    <TextBlock>3</TextBlock>
-                </Viewbox>
-            </Button>
+        <Button Style="{StaticResource Row1}"
+                Grid.Column="2"
+                Tag="3">
+            <Viewbox>
+                <TextBlock>3</TextBlock>
+            </Viewbox>
+        </Button>
 
 
-            <Button Grid.Column="0"
-                Grid.Row="2"
-                Tag="4"
-                Margin="5"
-                Click="ClickarNumero">
-                <Viewbox>
-                    <TextBlock>4</TextBlock>
-                </Viewbox>
-            </Button>
+        <Button Style="{StaticResource Row2}"
+                Grid.Column="0"
+                Tag="4">
+            <Viewbox>
+                <TextBlock>4</TextBlock>
+            </Viewbox>
+        </Button>
 
 
-            <Button Grid.Column="1"
-                    Grid.Row="2"
-                    Margin="5"
-                Tag="5"
-                Click="ClickarNumero">
-                <Viewbox>
-                    <TextBlock>5</TextBlock>
-                </Viewbox>
-            </Button>
+        <Button Style="{StaticResource Row2}"
+                Grid.Column="1"
+                Tag="5">
+            <Viewbox>
+                <TextBlock>5</TextBlock>
+            </Viewbox>
+        </Button>
 
 
-            <Button Grid.Column="2"
-                Grid.Row="2"
-                Margin="5"
-                Tag="6"
-                Click="ClickarNumero">
-                <Viewbox>
-                    <TextBlock>6</TextBlock>
-                </Viewbox>
-            </Button>
+        <Button Style="{StaticResource Row2}"
+                Grid.Column="2"
+                Tag="6">
+            <Viewbox>
+                <TextBlock>6</TextBlock>
+            </Viewbox>
+        </Button>
 
 
-        <Button Grid.Column="0"
-                Grid.Row="3"
-                Margin="5"
-                Tag="7"
-                Click="ClickarNumero">
+        <Button Style="{StaticResource Row3}"
+                Grid.Column="0"
+                Tag="7">
             <Viewbox>
                 <TextBlock>7</TextBlock>
             </Viewbox>
         </Button>
 
 
-        <Button Grid.Column="1"
-                Grid.Row="3"
-                Margin="5"
-                Tag="8"
-                Click="ClickarNumero">
+        <Button Style="{StaticResource Row3}"
+                Grid.Column="1"
+                Tag="8">
             <Viewbox>
                 <TextBlock>8</TextBlock>
             </Viewbox>
         </Button>
 
-        <Button  Grid.Column="2"
-                 Grid.Row="3"
-                 Margin="5"
-                 Tag="9"
-                 Click="ClickarNumero">
+        <Button Style="{StaticResource Row3}"
+                Grid.Column="2"
+                Tag="9">
             <Viewbox>
                 <TextBlock>9</TextBlock>
             </Viewbox>
         </Button>
 
-        <Button Grid.Column="0"
-                Grid.Row="4"
+        <Button Style="{StaticResource Row4}"
+                Grid.Column="0"
                 Grid.ColumnSpan="3"
-                Margin="5"
-                Tag="0"
-                Click="ClickarNumero">
+                Tag="0">
             <Viewbox>
                 <TextBlock>0</TextBlock>
             </Viewbox>
